@@ -4,28 +4,16 @@
         <meta charset='utf8'>
     </head>
     <body>
-        <div id='ruffle'></div>
-        <script src='https://github.com/Nobodycares-lo/CoolOnlineGames/blob/main/Ruffle/ruffle.js'></script>
-        <script>
-var swfobject = {};
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
 
-<div id="container"> </div>
-
-<script src="ruffle/ruffle.js"></script>
-    <script>
-        window.RufflePlayer = window.RufflePlayer || {};
-        window.addEventListener("load", (event) => {
-            const ruffle = window.RufflePlayer.newest();
-            const player = ruffle.createPlayer();
-            const container = document.getElementById("container"); 
-            container.appendChild(player);
-            player.load({
-                url: "https://github.com/Nobodycares-lo/CoolOnlineGames/blob/main/Flash/Bloons%20Tower%20Defense%205%20(BTD5).swf", 
-                backgroundColor: "#000", 
-             });
-            player.style.width = "450px"; 
-            player.style.height = "450px";
-        });
-    </script>
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("Bloons Tower Defense 5 (BTD5).swf");
+    });
+</script>
+<script src="Ruffle/ruffle.js"></script>
     </body>
-</html>
