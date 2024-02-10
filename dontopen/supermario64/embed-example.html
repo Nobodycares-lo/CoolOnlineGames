@@ -17,11 +17,10 @@
 		<input type="button" id="fullscreen" value="Fullscreen">
 		<br>
 		<br>
-		<a href="roms/LICENSE.txt">License for the example game "2048"</a>
 		
 		<script type="text/javascript" src="embed.js"></script>
 		<script>
-			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "nes", rom: "2048.nes"});
+			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "z64", rom: "mario.z64"});
 			document.getElementById("fullscreen").onclick = function() {
 				frame.requestFullscreen();
 			};
