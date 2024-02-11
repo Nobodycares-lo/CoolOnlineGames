@@ -12,6 +12,11 @@
             background-color: white;
             color: black;
             font-size: 25px;
+  display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
         }
 
         .dark-mode {
@@ -45,17 +50,10 @@
 
 .topnav a.active {
   background-color: #04AA6D;
-  color: white;
 }
-   <style type="text/css">
-       #yourHtmlTag{
-           text-align: center;
-
-           /*This is needed.*/
-           position: absolute;
-           top: 30%;
-           transition: all 1s ease-out;
-       }
+ h1 {
+      font-size: 3rem;
+    }
 </style>
 </head>
 <body>
@@ -69,17 +67,7 @@
 <body>
     <button style="float:right" onclick="toggleDarkMode()">Toggle dark mode</button>
     <button style="float:right" onclick="toggleBlueMode()">Toggle blue mode</button>
-
-   <body onload="floatUp()">
-   <header id="yourHtmlTag">CoolOfflineGames</header>
-
-<!-- The script needs to be below where it is called -->
-<script type="text/javascript">
-   function floatUp(){
-       document.getElementById('yourHtmlTag').style.top = "15%";
-   }
-</script>
-
+  <h1>CoolOnlineGames</h1>
     <p>The online version of CoolOfflineGames lmao</p>
     <p>This Version of the repository V 1.0 Has 1454 Games (mostly flash)</p>
 
