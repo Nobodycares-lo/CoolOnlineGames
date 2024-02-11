@@ -1,5 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+        body {
+            margin-top: 0;
+            overflow-x: hidden;
+            padding: 0px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .blue-mode {
+            background-color: lightblue;
+            color: white;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: rise 2s ease-in-out;
+        } 
+
+@​keyframes rise {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <a href="#home">Home</a>
+    <a class="active" href="/dontopen/contact.html">Contact</a>
+    <a href="#about">About</a>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
