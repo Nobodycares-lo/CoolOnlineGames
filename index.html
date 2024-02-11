@@ -47,6 +47,15 @@
   background-color: #04AA6D;
   color: white;
 }
+   <style type="text/css">
+       #yourHtmlTag{
+           text-align: center;
+
+           /*This is needed.*/
+           position: absolute;
+           top: 30%;
+           transition: all 1s ease-out;
+       }
 </style>
 </head>
 <body>
@@ -61,9 +70,15 @@
     <button style="float:right" onclick="toggleDarkMode()">Toggle dark mode</button>
     <button style="float:right" onclick="toggleBlueMode()">Toggle blue mode</button>
 
-    <big>
-        CoolOnlineGames
-    </big>
+   <body onload="floatUp()">
+   <header id="yourHtmlTag">CoolOfflineGames</header>
+
+<!-- The script needs to be below where it is called -->
+<script type="text/javascript">
+   function floatUp(){
+       document.getElementById('yourHtmlTag').style.top = "15%";
+   }
+</script>
 
     <p>The online version of CoolOfflineGames lmao</p>
     <p>This Version of the repository V 1.0 Has 1454 Games (mostly flash)</p>
