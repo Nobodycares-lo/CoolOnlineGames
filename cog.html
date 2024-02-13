@@ -63,9 +63,27 @@
                 opacity: 1;
             }
         }
+
+        .logo {
+            position: fixed;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        } 
+
     </style>
 </head>
 <body>
+   <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var logo = document.querySelector('.logo');
+            setTimeout(function() {
+                logo.style.opacity = 1;
+            }, 1000);
+        });
+    </script>
 <div class="topnav">
     <a class= href="/index.html">Home</a>
     <a href="/dontopen/contact.html">Contact</a>
@@ -78,7 +96,7 @@
 <h1>CoolOnlineGames</h1>
 <p>The online version of CoolOfflineGames lmao</p>
 <p>ok)</p>
-
+ <img class="logo" src="logo.png" alt="Logo">
 <script>
     function toggleDarkMode() {
         document.body.classList.toggle("dark-mode");
