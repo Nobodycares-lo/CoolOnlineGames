@@ -24,6 +24,15 @@
             background-color: lightblue;
             color: white;
         }
+.logo {
+      position: fixed;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
 
         .topnav {
             overflow: hidden;
@@ -67,9 +76,9 @@
 </head>
 <body>
 <div class="topnav">
-    <a class="active" href="#home">Home</a>
+    <a class= href="/index.html">Home</a>
     <a href="/dontopen/contact.html">Contact</a>
-    <a href="#about">About</a>
+    <a class="active" href= "/cog.html">Games</a>
 </div>
 </head>
 <body>
@@ -78,6 +87,7 @@
 <h1>CoolOnlineGames</h1>
 <p>The online version of CoolOfflineGames lmao</p>
 <p>ok)</p>
+     <img class="logo" src="logo.png" alt="Logo">
 
 <script>
     function toggleDarkMode() {
@@ -88,6 +98,13 @@
         document.body.classList.toggle("blue-mode");
     }
 </script>
+ <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var logo = document.querySelector('.logo');
+      setTimeout(function() {
+        logo.style.opacity = 1;
+      }, 1000);
+ </script>
 
     <div class="grid-container">
         <!-- Game buttons -->
