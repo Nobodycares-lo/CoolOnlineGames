@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logo, Text, and Button Fade-In Example</title>
+  <style>
+    body {
+      background-color: #040706;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+      margin-top: 100px;
+    }
+
+    .logo {
+      position: fixed;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
+    .big-text {
+      font-size: 36px;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+      position: absolute;
+      top: 135px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .small-text {
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+      position: absolute;
+      top: 195px;
+      left: 54%;
+      transform: translateX(-46%);
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+    .topnav {
+            overflow: hidden;
+            background-color: #333;
+            border-top: 2px solid black;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #ddd;
+            color: black;
+        }
+
+    .button {
+
+        background-color: lightblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var logo = document.querySelector('.logo');
+      setTimeout(function() {
+        logo.style.opacity = 1;
+      }, 1000);
+
+      var bigText = document.querySelector('.big-text');
+      var smallText = document.querySelector('.small-text');
+      var button = document.querySelector('.button');
+      setTimeout(function() {
+        bigText.classList.add('fade-in');
+        smallText.classList.add('fade-in');
+        button.style.display = 'block';
+        setTimeout(function() {
+          button.style.opacity = 1;
+        }, 100);
+      }, 1000);
+    });
+  </script>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="/dontopen/contact.html">Contact</a>
+        <a href="#about">About</a>
+    </div>
+  <div class="container">
+    <img class="logo" src="logo.png" alt="Logo">
+    <h1 class="big-text">Cool Online Games</h1>
+    <p class="small-text">By Nobodycares_lo</p>
+    <button class="button" onclick="window.location.href='/cog.html'">Start Playing!</button>
+  </div>
+</body>
+</html>
