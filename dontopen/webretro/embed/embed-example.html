@@ -11,17 +11,16 @@
 		</style>
 	</head>
 	<body>
-		<h1>Example webretro embed</h1>
+		<h1>Super Mario 64</h1>
 		<div id="webretro-container"></div>
 		<br>
 		<input type="button" id="fullscreen" value="Fullscreen">
 		<br>
 		<br>
-		<a href="roms/LICENSE.txt">License for the example game "2048"</a>
 		
 		<script type="text/javascript" src="embed.js"></script>
 		<script>
-			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "nes", rom: "2048.nes"});
+			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "n64", rom: "supermario.z64"});
 			document.getElementById("fullscreen").onclick = function() {
 				frame.requestFullscreen();
 			};
