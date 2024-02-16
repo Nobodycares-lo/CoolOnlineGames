@@ -44,6 +44,17 @@
             animation: rise 2s ease-in-out;
         } 
 
+@​keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll 10s linear infinite;
+}
+
 @​keyframes rise {
             0% {
                 transform: translateY(100px);
@@ -86,7 +97,9 @@
 <h1>Cool Online Games!</h1>
 </center>
 <p>Welcome</p>
-<p>We have lot o games</p>
+<div class="marquee">
+  <span>Join us on Discord!</span>
+</div>
 <audio id="myAudio" src="music.mp3"></audio>
 <button onclick="toggleMusic()">Toggle Music</button>
 
@@ -253,7 +266,6 @@
         <!-- Add more game buttons -->
     </div>
 
-    <p>HOW TO USE FLASH GAMES: Go to the website, click on "select file," then open the flash folder and click on one of the .swf files.</p>
 
     <script>
         function toggleDarkMode() {
