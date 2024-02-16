@@ -44,15 +44,21 @@
             animation: rise 2s ease-in-out;
         } 
 
-@​keyframes scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
 .marquee {
   white-space: nowrap;
   overflow: hidden;
-  animation: scroll 10s linear infinite;
+  width: 100%;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-right: 100%;
+  animation: marquee-animation 20s linear infinite;
+}
+
+@​keyframes marquee-animation {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
 @​keyframes rise {
@@ -65,15 +71,6 @@
                 opacity: 1;
             }
         }
-
-        .logo {
-            position: fixed;
-            top: 70px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 1s ease-in;
-        } 
 
     </style>
 </head>
@@ -97,8 +94,20 @@
 <h1>Cool Online Games!</h1>
 </center>
 <p>Welcome</p>
+<script>
+const texts = ["Join Us On Discord https://discord.gg/kZHHFdTG4t! , "Cash Likes Men", "New Games Added Everyday!"]; // Add your list of texts here
+const marqueeText = document.getElementById("marquee-text");
+
+function updateMarqueeText() {
+  const randomIndex = Math.floor(Math.random() * texts.length);
+  marqueeText.textContent = texts[randomIndex];
+}
+
+updateMarqueeText();
+setInterval(updateMarqueeText, 5000); // Change the interval time (in milliseconds) for text change
+</script>
 <div class="marquee">
-  <span>Join us on Discord!</span>
+  <span id="marquee-text"></span>
 </div>
 <audio id="myAudio" src="music.mp3"></audio>
 <button onclick="toggleMusic()">Toggle Music</button>
