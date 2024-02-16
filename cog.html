@@ -83,7 +83,20 @@
 <h1>CoolOnlineGames</h1>
 <p>The online version of CoolOfflineGames lmao</p>
 <p>We have lot o games</p>
-<audio src="music.mp3" autoplay loop></audio>
+<audio id="myAudio" src="music.mp3"></audio>
+<button onclick="toggleMusic()">Toggle Music</button>
+
+<script>
+  var audio = document.getElementById("myAudio");
+  
+  function toggleMusic() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
 <script src="script.js"></script>
     <div class="grid-container">
         <!-- Game buttons -->
