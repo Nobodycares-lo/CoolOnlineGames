@@ -1,46 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Chat Room</title>
-    <style>
-        #chatbox {
-            height: 300px;
-            overflow: scroll;
-        }
-    </style>
-</head>
-<body>
-    <div id="chatbox"></div>
-    <input type="text" id="message" placeholder="Type your message...">
-    <button onclick="sendMessage()">Send</button>
+   <big> COMING SOON</big>
 
- <script>
-        function sendMessage() {
-            const message = document.getElementById("message").value;
-            const chatbox = document.getElementById("chatbox");
-            
-            // Get existing messages from LocalStorage or initialize an empty array
-            const messages = JSON.parse(localStorage.getItem("messages")) || [];
-            
-            // Add the new message to the array
-            messages.push(message);
-            
-            // Save the updated messages back to LocalStorage
-            localStorage.setItem("messages", JSON.stringify(messages));
-            
-            // Display all messages in the chatbox
-            chatbox.innerHTML = messages.map(msg => `<p>${msg}</p>`).join("");
-            
-            // Clear the input field
-            document.getElementById("message").value = "";
-        }
-        
-        // Display existing messages when the page loads
-        window.onload = function() {
-            const chatbox = document.getElementById("chatbox");
-            const messages = JSON.parse(localStorage.getItem("messages")) || [];
-            chatbox.innerHTML = messages.map(msg => `<p>${msg}</p>`).join("");
-        };
-    </script>
-</body>
+</head>
 </html>
