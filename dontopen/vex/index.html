@@ -50,5 +50,18 @@
         }
         addScript(gameName, version, function() {});
     </script>
+	<div id="console"></div>
+<script>
+        // Capture console.log messages and display them in the console div
+        (function () {
+            var oldLog = console.log;
+            console.log = function (message) {
+                var consoleDiv = document.getElementById('console');
+                consoleDiv.innerHTML += message + '<br>';
+                oldLog.apply(console, arguments);
+            };
+        })();
+console.log("test");
+    </script>
 </body>
 </html>
