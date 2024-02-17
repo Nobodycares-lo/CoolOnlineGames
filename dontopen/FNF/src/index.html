@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+        #console {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+        }
+    </style>
 <head>
 	
 	<meta charset="utf-8">
@@ -66,7 +79,18 @@
 	
 </head>
 <body>
-	
+	<div id="console"></div>
+<script>
+        // Capture console.log messages and display them in the console div
+        (function () {
+            var oldLog = console.log;
+            console.log = function (message) {
+                var consoleDiv = document.getElementById('console');
+                consoleDiv.innerHTML += message + '<br>';
+                oldLog.apply(console, arguments);
+            };
+        })();
+    </script>
 	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
 	
 	<div id="openfl-content"></div>
