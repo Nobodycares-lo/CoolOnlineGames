@@ -1,10 +1,7 @@
-This repository contains all the files used for CoolOfflineGames.
+Welcome to the repository where we store CoolOnlineGames!
 
-Hosted using AWS Amplify
+I use github to store all of the files for this repository
 
+Downloading this Repository and attempting to run it offline will **Not** Work as most of the stuff used will not support file://
 
-Downloading this WILL NOT WORK.
-
-Do not ask me to compile it for file:///
-Damn tho
-700 commits W time for 1500 see you on the other side 
+Our latest Release is **Release V 2.0** Go check it out on our releases page!
