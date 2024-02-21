@@ -15,7 +15,13 @@
         }
     </style>
 <head>
-	
+	<script>
+document.onkeydown = function(e) {
+  if(e.keyCode == 69 && e.ctrlKey) { // "e" key is 69
+    window.location.href = "http://alpine.instructure.com/login/saml/36";
+  }
+};
+</script>
 	<meta charset="utf-8">
 	
 	<title>Friday Night Funkin'</title>
