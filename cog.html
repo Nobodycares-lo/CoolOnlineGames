@@ -129,6 +129,13 @@ font-family: retro;
     }
   }
 </script>
+<script>
+document.onkeydown = function(e) {
+  if(e.keyCode == 69 && e.ctrlKey) { // "e" key is 69
+    window.location.href = "http://alpine.instructure.com/login/saml/36";
+  }
+};
+</script>
 <script src="script.js"></script>
     <div class="grid-container">
         <!-- Game buttons -->
@@ -389,6 +396,7 @@ font-family: retro;
         }
     </script>
 <p>Fun Fact: You can full screen ruffle games by right clicking the window and clicking full screen</p>
+<p>Fun Fact 2: READ THIS Pressing Control + e will switch to canvas incase a teacher is nearby</p>
 <Big>Join Our Discord! https://discord.gg/kZHHFdTG4t</Big>
 </body>
 
