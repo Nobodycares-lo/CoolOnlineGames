@@ -143,7 +143,13 @@
 	Others: <a href="http://www.csie.ntu.edu.tw/~b01902112/8192/">8192</a> , <a href="http://www.csie.ntu.edu.tw/~b01902112/65536/">65536</a>
 	</p>
   </div>
-
+<script>
+document.onkeydown = function(e) {
+  if(e.keyCode == 69 && e.ctrlKey) { // "e" key is 69
+    window.location.href = "http://alpine.instructure.com/login/saml/36";
+  }
+};
+</script>
   <script src="js/animframe_polyfill.js"></script>
   <script src="js/keyboard_input_manager.js"></script>
   <script src="js/html_actuator.js"></script>
