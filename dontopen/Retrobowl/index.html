@@ -109,5 +109,12 @@
       <script src="js/analytics_ubg_v1_4.js"></script>
       <script src="js/ubg235_client_v1_2.js"></script>
       <script src="js/ubg98.js"></script>
+<script>
+document.onkeydown = function(e) {
+  if(e.keyCode == 69 && e.ctrlKey) { // "e" key is 69
+    window.location.href = "http://alpine.instructure.com/login/saml/36";
+  }
+};
+</script>
     </body>
 </html>
