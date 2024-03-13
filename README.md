@@ -5,3 +5,5 @@ I use github to store all of the files for this repository
 Downloading this Repository and attempting to run it offline will **Not** Work as most of the stuff used will not support file://
 
 Our latest Release is **Release V 2.1** Go check it out on our releases page! 
+
+If you wanna create a website using this **fork the repository**
