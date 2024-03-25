@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000; // Use the provided PORT environment variable or default to 3000
+const PORT = process.env.PORT || 8080; // Use the provided PORT environment variable or default to 3000
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
